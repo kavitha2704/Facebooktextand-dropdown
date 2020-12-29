@@ -25,9 +25,9 @@ public class Facebook
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		driver.get("https://www.facebook.com/");
 		driver.findElement(By.xpath("//a[@class='_42ft _4jy0 _6lti _4jy6 _4jy2 selected _51sy']")).click();
-		driver.findElement(By.xpath("//input[@class='inputtext _58mg _5dba _2ph-' and @name='firstname']")).sendKeys("Test");
-		driver.findElement(By.xpath("//input[@class='inputtext _58mg _5dba _2ph-' and @name='lastname']")).sendKeys("testnew");
-		driver.findElement(By.xpath("//input[@class='inputtext _58mg _5dba _2ph-' and @name='reg_email__']")).sendKeys("test@gmail.com");
+		driver.findElement(By.xpath("//input[@class='inputtext _58mg _5dba _2ph-' and @name='firstname']")).sendKeys("pinky");
+		driver.findElement(By.xpath("//input[@class='inputtext _58mg _5dba _2ph-' and @name='lastname']")).sendKeys("rinky");
+		driver.findElement(By.xpath("//input[@class='inputtext _58mg _5dba _2ph-' and @name='reg_email__']")).sendKeys("testabc@gmail.com");
         driver.findElement(By.xpath("//input[@class='inputtext _58mg _5dba _2ph-' and @type='password']")).sendKeys("test@123");
         WebElement ele=driver.findElement(By.id("day"));
         Select sel=new Select(ele);
@@ -39,12 +39,13 @@ public class Facebook
         Select sel2=new Select(ele2);
         sel2.selectByValue("1992");
         
-        driver.findElement(By.xpath("//label[@class='_58mt']/following-sibling::input[@id='u_1_4']")).click();
+        driver.findElement(By.xpath("//*[contains(text(),'Female')]")).click();
        
        
        
-        driver.findElement(By.xpath("//button[@name='websubmit']")).click();
-        
+       driver.findElement(By.xpath("//button[@name='websubmit']")).click();
+       driver.findElement(By.xpath("//input[@class='inputtext _58mg _5dba _2ph- _5f0v']")).sendKeys("testabc@gmail.com");
+       driver.findElement(By.xpath("//button[@name='websubmit']")).click();
 	
-	}
+	} 
 }
